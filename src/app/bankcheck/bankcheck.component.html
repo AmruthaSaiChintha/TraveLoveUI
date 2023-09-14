@@ -1,0 +1,31 @@
+<div class="col-md-6">
+    <div class="card transaction-form">
+      <div class="card-body">
+        <h2 class="card-title">Enter Bank Card Details</h2>
+        <form (ngSubmit)="submitBankDetails()" #bankForm="ngForm">
+          <div class="form-group">
+            <label for="bankName" class="form-label">Bank Name:</label>
+            <input type="text" id="bankName" name="bankName" [(ngModel)]="bankName" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber" class="form-label">Card Number (Last 4 digits):</label>
+            <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="ExpiryDate" class="form-label">Expiry Date:</label>
+            <input type="date" id="ExpiryDate" name="ExpiryDate" [(ngModel)]="ExpiryDate" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="ybl" class="form-label">ybl:</label>
+            <input type="text" id="ybl" name="ybl" [(ngModel)]="ybl" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div *ngIf="showSuccessMessage" class="success-message">
+          Transaction is successful!
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
